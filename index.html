@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  </head>
+  <body>
+    <div class="weather-card">
+      <h1>Weather App</h1>
+      <div class="search-bar">
+        <input type="text" id="city-input" placeholder="Enter city name" />
+        <button id="get-weather-btn">🔍</button>
+      </div>
+      <div class="top-bar">
+        <p id="location-display"><i class="fas fa-map-marker-alt icon"></i><span id="city-name">City</span></p>
+        <p id="current-date" class="date-display"></p>
+      </div>
+      <div id="weather-info" class="hidden">
+        <img id="weather-icon" src="" alt="Weather Icon" class="weather-icon" />
+        <div class="weather-main">
+          <h2 id="temperature">--°C</h2>
+          <p id="city-name"></p>
+        </div>
+        <p id="description">Weather Description</p>
+        <div class="extra-info">
+          <div class="info-block">
+            <p class="info-label"><i class="fas fa-tint icon"></i>Humidity</p>
+            <p id="humidity-value">--%</p>
+          </div>
+          <div class="info-block">
+            <p class="info-label"><i class="fas fa-wind icon"></i>Wind Speed</p>
+            <p id="wind-value">-- km/h</p>
+          </div>
+        </div>
+      </div>
+      <p id="error-message" class="hidden">City not found. Please try again.</p>
+    </div>
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
